@@ -10,9 +10,14 @@ import { Vuelos } from 'src/app/models/vuelos.model';
 })
 export class TutorialDetailsComponent implements OnInit {
   currentTutorial: Vuelos = {
-    title: '',
-    description: '',
-    published: false
+    airline: '',
+    time: '',
+    fromvuelo: '',
+    remarks: '',
+    tovuelo: '',
+    gate: '',
+    typeVuelo: '',
+    flightNo: 0
   };
   message = '';
 
@@ -40,9 +45,14 @@ export class TutorialDetailsComponent implements OnInit {
 
   updatePublished(status: boolean): void {
     const data = {
-      title: this.currentTutorial.title,
-      description: this.currentTutorial.description,
-      published: status
+      airline: this.currentTutorial.airline,
+      time: this.currentTutorial.time,
+      fromvuelo: this.currentTutorial.fromvuelo,
+      remarks: this.currentTutorial.remarks,
+      tovuelo: this.currentTutorial.fromvuelo,
+      gate: this.currentTutorial.gate,
+      typeVuelo: this.currentTutorial.typeVuelo,
+      flightNo: this.currentTutorial.flightNo
     };
 
     this.message = '';
@@ -50,7 +60,7 @@ export class TutorialDetailsComponent implements OnInit {
     this.tutorialService.update(this.currentTutorial.id, data)
       .subscribe(
         response => {
-          this.currentTutorial.published = status;
+      
           console.log(response);
           this.message = response.message ? response.message : 'This tutorial was updated successfully!';
         },

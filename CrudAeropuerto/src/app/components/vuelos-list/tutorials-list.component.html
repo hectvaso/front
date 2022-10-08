@@ -5,7 +5,7 @@
         type="text"
         class="form-control"
         placeholder="Buscar por el numero del vuelo"
-        [(ngModel)]="title"
+       
       />
       <div class="input-group-append">
         <button
@@ -27,7 +27,7 @@
         [class.active]="i == currentIndex"
         (click)="setActiveTutorial(tutorial, i)"
       >
-        {{ tutorial.title }}
+        {{ tutorial.airline }}
       </li>
     </ul>
 
@@ -39,11 +39,11 @@
     <div *ngIf="currentTutorial">
       <h4>Vuelo</h4>
       <div>
-        <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+        <label><strong>Aerolinea:</strong></label> {{ currentTutorial.airline }}
       </div>
       <div>
         <label><strong>Aerolinea:</strong></label>
-        {{ currentTutorial.description }}
+        {{ currentTutorial.airline }}
       </div>
       <div>
         <label><strong>Status:</strong></label>

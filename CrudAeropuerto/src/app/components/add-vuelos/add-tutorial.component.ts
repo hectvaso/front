@@ -8,10 +8,15 @@ import { TutorialService } from 'src/app/services/vuelos.service';
   styleUrls: ['./add-tutorial.component.css']
 })
 export class AddTutorialComponent implements OnInit {
-  tutorial: Vuelos = {
-    title: '',
-    description: '',
-    published: false
+  vuelo: Vuelos = {
+    airline: '',
+    time: '',
+    fromvuelo: '',
+    remarks: '',
+    tovuelo: '',
+    gate: '',
+    typeVuelo: '',
+    flightNo: 0
   };
   submitted = false;
 
@@ -22,8 +27,17 @@ export class AddTutorialComponent implements OnInit {
 
   saveTutorial(): void {
     const data = {
-      title: this.tutorial.title,
-      description: this.tutorial.description
+      airline: this.vuelo.airline,
+      time: this.vuelo.time,
+      fromvuelo: this.vuelo.fromvuelo,
+      remarks: this.vuelo.remarks,
+      tovuelo: this.vuelo.fromvuelo,
+      gate: this.vuelo.gate,
+      typeVuelo: this.vuelo.typeVuelo,
+      flightNo: this.vuelo.flightNo
+
+      
+
     };
 
     this.tutorialService.create(data)
@@ -39,10 +53,15 @@ export class AddTutorialComponent implements OnInit {
 
   newTutorial(): void {
     this.submitted = false;
-    this.tutorial = {
-      title: '',
-      description: '',
-      published: false
+    this.vuelo = {
+      airline: '',
+    time: '',
+    fromvuelo: '',
+    remarks: '',
+    tovuelo: '',
+    gate: '',
+    typeVuelo: '',
+    flightNo: 0
     };
   }
 

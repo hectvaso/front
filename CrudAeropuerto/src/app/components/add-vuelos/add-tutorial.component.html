@@ -2,25 +2,89 @@
   <div class="submit-form">
     <div *ngIf="!submitted">
       <div class="form-group">
-        <label for="title">Aeroliena</label>
+        <label for="airline">Aeroliena</label>
         <input
           type="text"
           class="form-control"
-          id="title"
+          id="airline"
           required
-          [(ngModel)]="tutorial.title"
-          name="title"
+          [(ngModel)]="vuelo.airline"
+          name="airline"
+        />
+      </div>
+      <div class="form-group">
+        <label for="time">Time</label>
+        <input
+          type="text"
+          class="form-control"
+          id="time"
+          required
+          [(ngModel)]="vuelo.time"
+          name="time"
+        />
+      </div>
+      <div class="form-group">
+        <label for="fromvuelo">Desde</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fromvuelo"
+          required
+          [(ngModel)]="vuelo.fromvuelo"
+          name="fromvuelo"
+        />
+      </div>
+      <div class="form-group">
+        <label for="remarks">Descripcion</label>
+        <input
+          type="text"
+          class="form-control"
+          id="remarks"
+          required
+          [(ngModel)]="vuelo.remarks"
+          name="remarks"
         />
       </div>
 
       <div class="form-group">
-        <label for="description">Tipo</label>
+        <label for="tovuelo">A</label>
         <input
           class="form-control"
-          id="description"
+          id="tovuelo"
           required
-          [(ngModel)]="tutorial.description"
-          name="description"
+          [(ngModel)]="vuelo.tovuelo"
+          name="tovuelo"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="gate">Porton</label>
+        <input
+          class="form-control"
+          id="gate"
+          required
+          [(ngModel)]="vuelo.gate"
+          name="gate"
+        />
+      </div>
+      <div class="form-group">
+        <label for="typeVuelo">Tipo vuelo</label>
+        <input
+          class="form-control"
+          id="typeVuelo"
+          required
+          [(ngModel)]="vuelo.typeVuelo"
+          name="typeVuelo"
+        />
+      </div>
+      <div class="form-group">
+        <label for="flightNo">Numero vuelo</label>
+        <input
+          class="form-control"
+          id="flightNo"
+          required
+          [(ngModel)]="vuelo.flightNo"
+          name="flightNo"
         />
       </div>
 

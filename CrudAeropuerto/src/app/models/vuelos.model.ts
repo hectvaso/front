@@ -1,6 +1,13 @@
 export class Vuelos {
   id?: any;
-  title?: string;
-  description?: string;
-  published?: boolean;
+  airline?: string;
+  time?: string;
+  fromvuelo?: string;
+  remarks?: string;
+  tovuelo?: string;
+  gate?: string;
+  typeVuelo?: string;
+  flightNo?: number;
+  published?: false;
+
 }
